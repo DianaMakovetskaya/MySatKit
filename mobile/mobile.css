@@ -1,9 +1,9 @@
 body{
-    background-image: url("images/bacground.png");
+    background-image: url("../images/bacground.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Lato", sans-serif;
-    padding: 0;
+    margin: 0;
 }
 
 .content{
@@ -16,7 +16,24 @@ body{
     text-align: center;
 }
 
+.velocityBlock{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.velocityValue{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0px 40px;
+}
 
+.image-model{
+    display: none;
+}
 .timer{
     display: flex;
     align-items: center;
@@ -35,10 +52,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
 }
 .switch {
     position: relative;
@@ -102,7 +115,7 @@ input:checked + .slider:before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60%;
+    height: 100%;
 }
 
 .vector{
@@ -112,15 +125,15 @@ input:checked + .slider:before {
 }
 #square{
     width: 40%;
-    height: 100%;
+    height: 50%;
     border: 2px white solid;
 }
 
 .title{
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 18px;
+    line-height: 22px;
     color: #FFFFFF;
 }
 
@@ -133,6 +146,9 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 30%;
 }
 
 
@@ -148,34 +164,31 @@ input:checked + .slider:before {
 #qualityRow{
     display: flex;
     justify-content: space-between;
+    height: 60%;
 }
 
 
 .quality-el{
-    width: 35.68px;
-    height: 80.82px;
+    width: 10%;
+    height: 100%;
     background-color: black;
 }
 
 #qualityRow .el3 {
-    width: 107px;
-    height: 80.82px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
+    width: 35%;
     text-align: center;
     display: flex;
     align-items: center;
     color: #009DAA;
+
 }
 
 
 
 .outer-circle {
     border:3px solid #009DAA;
-    height:139px;
-    width:25%;
+    width: 85px;
+    height: 85px;
     border-radius:50%;
     position: relative;
     display: flex;
@@ -185,15 +198,14 @@ input:checked + .slider:before {
 
 
 .inner-circle {
-    width: 110px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
     position:absolute;
     top:50%; left:50%;
     transform: translate(-50%, -50%);
     margin:0;
     border:3px solid #009DAA;
     border-radius:50%;
-    z-index: -1111111;
 }
 
 .clock-number{
@@ -207,7 +219,7 @@ input:checked + .slider:before {
 .clock-number:after {
     content: "";
     position: absolute;
-    height: 17.8px;
+    height: 11px;
     width: 2px;
     background: white;
 }
@@ -221,7 +233,7 @@ input:checked + .slider:before {
 
 }
 .sunImg:after{
-    content: url("images/Sunlight.png");
+    content: url("../images/Sunlight.png");
     position: absolute;
 }
 
@@ -278,7 +290,7 @@ input:checked + .slider:before {
     border-radius:12px;
 }
 .second-hand{
-    height: 65px;
+    height: 50px;
     width: 3px;
     background: white;
 }
@@ -301,8 +313,8 @@ input:checked + .slider:before {
     width: 40%;
     font-style: normal;
     font-weight: 300;
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 16px;
+    line-height: 19px;
     color: white;
 }
 .indicators{
@@ -312,11 +324,11 @@ input:checked + .slider:before {
 }
 .indicator{
     width: 15%;
-    height: 25px;
     background-color: #009DAA;
 }
 .indicatorsRow{
     display: flex;
+    height: 15%;
 }
 .supplyVoltageIndicator5,.voltageIndicator4,.voltageIndicator5,.currentIndicator1,.currentIndicator2,.currentIndicator3,
 .currentIndicator4,.currentIndicator5{
@@ -326,22 +338,32 @@ input:checked + .slider:before {
 .onboardTime {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    max-height: 60%;
+    height: 100%;
 }
-.onboardTime .time{
-    font-style: normal;
-    font-weight: 200;
-    font-size: 80px;
-    line-height: 96px;
-}
+
 .chain{
+    display: flex;
+    flex-direction: column;
+    max-height: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+
+}
+.wifiBlock{
+    max-height: 40%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 .wifi{
-    display: flex;
-    justify-content: space-between;
-    width: 31%;
+    align-self: self-end;
 }
 .wifiIndicators{
     width: 60%;
@@ -361,49 +383,40 @@ input:checked + .slider:before {
     height: 60%;
 }
 .ind3{
-    height: 90%;
+    height: 80%;
     background-color: #D1EDF0;
 }
 .ind4{
-    height: 120%;
+    height: 100%;
     background-color: #D1EDF0;
 }
 
 .ip{
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
+    align-items: end;
+    font-weight: 300;
     color: white;
 }
-.ipValue{
-    font-weight: 300;
-    font-size: 28px;
-    line-height: 34px;
-}
+
 
 
 .sunlightTrackerCircle{
     position: relative;
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
     margin: 0 auto;
     border:2px solid white;
-    height:308px;
+    width: 221px;
+    height: 221px;
     border-radius:50%;
-    width:308px;
     display: flex;
     align-items: center;
 }
 .sunlightTrackerCircle .clock-number:after{
-    content: "";
     height: 27px;
     width: 2px;
     background: #009DAA;
+
 }
 
 .sunlightTrackerCircle .num7:after,.sunlightTrackerCircle .num8:after,.sunlightTrackerCircle .num9:after{
@@ -442,219 +455,261 @@ input:checked + .slider:before {
 
 
 .wrapper{
-    padding: 20px 90px;
+    padding-top: 70px;
 
 }
 .mainContainer{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     color: white;
+    flex-direction: column;
+
 }
 .block{
     background-color: rgb(90,122,133);
 }
 .mainBlock{
-    width: 40%;
+    width: 100%;
     height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 .imageBlock{
     width: 100%;
-    max-height: 70%;
-    height: 100%;
+    height: 540px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 40px 30px 30px;
+    padding-bottom: 25px;
 }
 .imageBlock .image-wrapper{
     width: 100%;
-    height: 75%;
+    height: 60%;
 }
 .imageBlock .image-wrapper img{
     width: 100%;
     height: 100%;
 }
 .timeAndButtonBlock{
-    /*margin-top: 50px;*/
-    max-height: 30%;
+    max-height: 40%;
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 50px;
 }
 
 .shootingTimeBlock{
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    max-height: 60%;
+    height: 100%;
+
 }
 .buttonBlock{
-    width: 50%;
-    display: flex;
-    justify-content: end;
+    width: 100%;
+    max-height: 40%;
+    height: 100%;
+    /*display: flex;*/
+    /*justify-content: end;*/
 }
 .buttonBlock button{
     align-self: center;
-    width: 70%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     color:#009DAA;
-    font-size: 120%;
+    font-size: 28px;
+    line-height: 33px;
     background-color: #D1EDF0;
 }
 .switcherBlock{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+}
+
+.starTimerBlock{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .separator1{
     background-color: white;
-    height: 100%;
-    width: 2px;
+    height: 2px;
+    width: 100%;
+
 }
 .separator2{
     background-color: white;
     width: 2px;
+    display: none;
 
 }
 .infoBlock{
-    width: 55%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.starSolarBlock{
-    height: 100%;
+    width: 100%;
     max-height: 25%;
-    display: flex;
-    justify-content: space-between;
-}
-.starBlock{
-    box-sizing: border-box;
-    padding: 15px 30px;
-    width: 45%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.starBlock .timer{
-    flex-direction: column;
-    align-items: end;
-}
-.solarBlock{
+.starBlock{
     box-sizing: border-box;
-    padding: 15px 15px 30px;
-    width: 50%;
+    padding: 20px 25px 50px;
+    height: 185px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
+.timer{
+    flex-direction: column;
+}
+/*.starBlock .timer{*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    justify-content: normal;*/
+/*}*/
+.solarBlock{
+    box-sizing: border-box;
+    padding: 20px 35px;
+    height: 195px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
 
 .temperatureBlock{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 10px 40px 5px;
-    max-height: 15%;
-    height: 100%;
+    padding: 10px 30px;
+    height: 190px;
+    width: 100%;
 }
 .gyroscopeBlock{
-    max-height: 20%;
+    max-height:140px;
     height: 100%;
     box-sizing: border-box;
-    padding: 15px 40px 10px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.anotherInfoBlock{
-    display: flex;
-    justify-content: space-between;
-    max-height: 60%;
-    height: 100%;
-}
-.airSunlightBlock{
-    width: 37%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 .airBlock{
+    width: 100%;
     box-sizing: border-box;
-    padding: 15px 10px 55px;
-    max-height: 35%;
-    height: 100%;
+    padding: 20px;
+    height: 155px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 }
 .sunlightBlock{
     box-sizing: border-box;
-    padding: 10px 20px 30px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 60%;
-    height: 100%;
+    align-items: center;
+    height: 330px;
 }
 
-.magnetometerBatteryTimeBlock{
-    width:60%;
+.starSolarBatteryBlock{
+    width:49%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.batteryTimeBlock{
-    max-height: 60%;
+.solarBatteryBlock{
+    max-height: 65%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .magnetometerBlock{
     width: 100%;
     box-sizing: border-box;
-    padding: 5px 20px 10px;
-    max-height: 35%;
+    padding: 10px 0;
+    max-height: 153px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 }
 .magnetometerCircles{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*height: 100%;*/
+    /*width: 100%;*/
 }
 .batteryBlock{
+    margin-top: 20px;
     box-sizing: border-box;
-    padding: 10px 30px 20px;
-    max-height: 50%;
-    height: 100%;
-}
-.onboardTimeBlock{
-    box-sizing: border-box;
-    padding: 10px 30px 25px;
+    padding: 10px 20px;
+    height: 210px;
     display: flex;
     flex-direction: column;
-    max-height: 40%;
-    height: 100%;
+    justify-content: space-between;
+}
+.onboardTimeBlock{
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px 100px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
 }
 
 .titleType1{
     font-style: normal;
     font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+.content,.time,.onboardTime .time{
+    font-size: 36px;
+    line-height: 43px;
+}
+
+
+.data{
+    display: flex;
+    justify-content: space-between;
+}
+.data,.switcher,.el3,.chain{
     font-size: 24px;
     line-height: 29px;
 }
-@media screen and (max-width: 1024px) {
-    .mainContainer{
-        flex-direction: row-reverse;
-    }
+.dataColumns{
+    width: 100%;
 }

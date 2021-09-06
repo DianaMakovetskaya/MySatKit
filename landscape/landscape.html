@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:200,300,400,500i,900,900i">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="landscape.css">
+    <script src="landscape.js"></script>
 </head>
 <body>
-
-
 <div class="wrapper">
     <div class="title">MySat Mission Control v.2.01</div>
     <div class="mainContainer titleType1">
         <div class="mainBlock">
-            <div class="imageBlock block">
-                <div class="image-wrapper"><img src="images/photoEarth.png" alt=""></div>
+            <div class="velocityBlock">
+                <div class="image-wrapper"><img src="../images/ss%201.png" alt=""></div>
+
+                <div class="velocityValue">
+                    <div>Relative <br>Velocity</div>
+                    <div class="content">5 m/s</div>
+                </div>
+
+            </div>
+            <div class="imageBlock">
+                <div class="image-wrapper"><img src="../images/photoEarth.png" alt=""></div>
                 <div class="timeAndButtonBlock">
                     <div class="shootingTimeBlock">
                         <div>Shooting time</div>
                         <div class="timer">
                             <div class="time">00:15:00</div>
-                            <div class="layer"><img src="images/clock.png" alt="clockImg"></div>
+                            <div class="layer"><img src="../images/clock.png" alt="clockImg"></div>
                         </div>
                     </div>
                     <div class="buttonBlock">
@@ -28,74 +36,59 @@
                     </div>
                 </div>
             </div>
-            <div class="starSolarBlock">
-                <div class="starBlock block">
-                    <div class="switcherBlock">
-                        <div>Star</div>
-                        <div class="switcher">
-                            <div id="On1">ON</div>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="Off1">OFF</div>
-                        </div>
-                    </div>
-                    <div class="starTimerBlock">
-                        <div>Star timer</div>
-                        <div class="timer">
-                            <div class="time">01:11:12</div>
-                            <div class="layer"><img src="images/clock.png" alt="clockImg"></div>
-                        </div>
-                    </div>
 
+            <div class="onboardTimeBlock">
+                <div class="onboardTime">
+                    <div>Onboard <br> time</div>
+                    <div class="timer">
+                        <div class="time">01:11:12</div>
+                        <div class="layer"><img src="../images/clock.png" alt="clockImg"></div>
+                    </div>
                 </div>
-                <div class="solarBlock block">
-                    <div class="switcherBlock">
-                        <div>Solar Panels</div>
-                        <div class="switcher">
-                            <div id="On2">ON</div>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="Off2">OFF</div>
+                <div class="chain">
+                    <div class="wifi">
+                        <div >WIFI</div>
+                        <div class="wifiIndicators">
+                            <div class="wifiIndicator ind1"></div>
+                            <div class="wifiIndicator ind2"></div>
+                            <div class="wifiIndicator ind3"></div>
+                            <div class="wifiIndicator ind4"></div>
                         </div>
                     </div>
-                    <div class="squareBlock">
-                        <div class="vector"></div>
-                        <div id="square"></div>
-                        <div class="vector"></div>
-
+                    <div class="ip">
+                        <div >Ip</div>
+                        <div class="ipValue">127.0.0.21</div>
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="separator1"></div>
         <div class="infoBlock">
             <div class="temperatureBlock block">
                 <div>
-                    <div class="title">Temperature</div>
+                    <div>Temperature</div>
                     <div class="content">0 C</div>
                 </div>
 
                 <div>
-                    <div class="title">Humidity</div>
+                    <div>Humidity</div>
                     <div class="content">15%</div>
                 </div>
                 <div>
-                    <div class="title">Pressure</div>
+                    <div>Pressure</div>
                     <div class="content">0 hPa</div>
                 </div>
                 <div>
-                    <div class="title">Altitude</div>
+                    <div>Altitude</div>
                     <div class="content">500 m</div>
                 </div>
             </div>
 
             <div class="gyroscopeBlock block">
                 <div class="gyroscope">
-                    <div class="title">Gyroscope</div>
+                    <div>Gyroscope</div>
                     <div>
                         <div class="data">
                             <div>X</div>
@@ -113,7 +106,7 @@
                 </div>
 
                 <div class="accelerometer">
-                    <div class="title">Accelerometer</div>
+                    <div>Accelerometer</div>
                     <div>
                         <div class="data">
                             <div>X</div>
@@ -129,11 +122,92 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>Relative <br>Velocity</div>
-                    <div class="content">5 m/s</div>
+                <div class="magnetometerBlock block">
+                    <div>Magnetometer</div>
+                    <div class="magnetometerCircles">
+                        <div class="circle">
+                            <div>X</div>
+                            <div class="outer-circle">
+                                <div class="cross">
+                                    <div class="hrz"></div>
+                                    <div class="vrt"></div>
+                                </div>
+                                <div class="clock-number num1"></div>
+                                <div class="clock-number num2"></div>
+                                <div class="clock-number num3"></div>
+                                <div class="clock-number num4"></div>
+                                <div class="clock-number num5"></div>
+                                <div class="clock-number num6"></div>
+                                <div class="clock-number num7"></div>
+                                <div class="clock-number num8"></div>
+                                <div class="clock-number num9"></div>
+                                <div class="clock-number num10"></div>
+                                <div class="clock-number num11"></div>
+                                <div class="clock-number num12"></div>
+                                <div class="clock-hand arrow">
+                                    <div class="second-hand"></div>
+                                </div>
+                                <div class="inner-circle">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle">
+                            <div>Y</div>
+                            <div class="outer-circle">
+                                <div class="cross">
+                                    <div class="hrz"></div>
+                                    <div class="vrt"></div>
+                                </div>
+                                <div class="clock-number num1"></div>
+                                <div class="clock-number num2"></div>
+                                <div class="clock-number num3"></div>
+                                <div class="clock-number num4"></div>
+                                <div class="clock-number num5"></div>
+                                <div class="clock-number num6"></div>
+                                <div class="clock-number num7"></div>
+                                <div class="clock-number num8"></div>
+                                <div class="clock-number num9"></div>
+                                <div class="clock-number num10"></div>
+                                <div class="clock-number num11"></div>
+                                <div class="clock-number num12"></div>
+                                <div class="clock-hand arrow">
+                                    <div class="second-hand"></div>
+                                </div>
+                                <div class="inner-circle">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="circle">
+                            <div>Z</div>
+                            <div class="outer-circle">
+                                <div class="cross">
+                                    <div class="hrz"></div>
+                                    <div class="vrt"></div>
+                                </div>
+                                <div class="clock-number num1"></div>
+                                <div class="clock-number num2"></div>
+                                <div class="clock-number num3"></div>
+                                <div class="clock-number num4"></div>
+                                <div class="clock-number num5"></div>
+                                <div class="clock-number num6"></div>
+                                <div class="clock-number num7"></div>
+                                <div class="clock-number num8"></div>
+                                <div class="clock-number num9"></div>
+                                <div class="clock-number num10"></div>
+                                <div class="clock-number num11"></div>
+                                <div class="clock-number num12"></div>
+                                <div class="clock-hand arrow">
+                                    <div class="second-hand"></div>
+                                </div>
+                                <div class="inner-circle">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="image-wrapper"><img src="images/ss%201.png" alt=""></div>
+
             </div>
 
             <div class="anotherInfoBlock">
@@ -170,81 +244,51 @@
                     </div>
                 </div>
                 <div class="separator2"></div>
-                <div class="magnetometerBatteryTimeBlock">
-                    <div class="magnetometerBlock block">
-                        <div>Magnetometer</div>
-                        <div class="magnetometerCircles">
-                            <div class="outer-circle">
-                                <div class="cross">
-                                    <div class="hrz"></div>
-                                    <div class="vrt"></div>
-                                </div>
-                                <div class="clock-number num1"></div>
-                                <div class="clock-number num2"></div>
-                                <div class="clock-number num3"></div>
-                                <div class="clock-number num4"></div>
-                                <div class="clock-number num5"></div>
-                                <div class="clock-number num6"></div>
-                                <div class="clock-number num7"></div>
-                                <div class="clock-number num8"></div>
-                                <div class="clock-number num9"></div>
-                                <div class="clock-number num10"></div>
-                                <div class="clock-number num11"></div>
-                                <div class="clock-number num12"></div>
-                                <div class="clock-hand arrow">
-                                    <div class="second-hand"></div>
-                                </div>
-                                <div class="inner-circle">
+                <div class="starSolarBatteryBlock">
+                                    <div class="starBlock block">
+                                        <div class="switcherBlock">
+                                            <div>Star</div>
+                                            <div class="switcher">
+                                                <div id="On1">ON</div>
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <div id="Off1">OFF</div>
+                                            </div>
+                                        </div>
+                                        <div class="starTimerBlock">
+                                            <div>Star timer</div>
+                                            <div class="timer">
+                                                <div class="time">01:11:12</div>
+                                                <div class="layer"><img src="../images/clock.png" alt="clockImg"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                    <div class="solarBatteryBlock">
+                        <div class="solarBlock block">
+                            <div class="switcherBlock">
+                                <div>Solar Panels</div>
+                                <div class="switcher">
+                                    <div id="On2">ON</div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div id="Off2">OFF</div>
                                 </div>
                             </div>
-                            <div class="outer-circle">
-                                <div class="cross">
-                                    <div class="hrz"></div>
-                                    <div class="vrt"></div>
-                                </div>
-                                <div class="clock-number num1"></div>
-                                <div class="clock-number num2"></div>
-                                <div class="clock-number num3"></div>
-                                <div class="clock-number num4"></div>
-                                <div class="clock-number num5"></div>
-                                <div class="clock-number num6"></div>
-                                <div class="clock-number num7"></div>
-                                <div class="clock-number num8"></div>
-                                <div class="clock-number num9"></div>
-                                <div class="clock-number num10"></div>
-                                <div class="clock-number num11"></div>
-                                <div class="clock-number num12"></div>
-                                <div class="clock-hand arrow">
-                                    <div class="second-hand"></div>
-                                </div>
-                                <div class="inner-circle"></div>
-                            </div>
-                            <div class="outer-circle">
-                                <div class="cross">
-                                    <div class="hrz"></div>
-                                    <div class="vrt"></div>
-                                </div>
-                                <div class="clock-number num1"></div>
-                                <div class="clock-number num2"></div>
-                                <div class="clock-number num3"></div>
-                                <div class="clock-number num4"></div>
-                                <div class="clock-number num5"></div>
-                                <div class="clock-number num6"></div>
-                                <div class="clock-number num7"></div>
-                                <div class="clock-number num8"></div>
-                                <div class="clock-number num9"></div>
-                                <div class="clock-number num10"></div>
-                                <div class="clock-number num11"></div>
-                                <div class="clock-number num12"></div>
-                                <div class="clock-hand arrow">
-                                    <div class="second-hand"></div>
-                                </div>
-                                <div class="inner-circle"></div>
+                            <div class="squareBlock">
+                                <div class="vector"></div>
+                                <div id="square"></div>
+                                <div class="vector"></div>
+
                             </div>
                         </div>
 
-                    </div>
-                    <div class="batteryTimeBlock">
+
                         <div class="batteryBlock block">
                             <div>Battery</div>
                             <div class="indicatorsRow">
@@ -288,39 +332,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="onboardTimeBlock block">
-                            <div class="onboardTime">
-                                <div>Onboard <br> time</div>
-                                <div class="timer">
-                                    <div class="time">01:11:12</div>
-                                    <div class="layer"><img src="images/clock.png" alt="clockImg"></div>
-                                </div>
-                            </div>
-                            <div class="chain">
-                                <div class="wifi">
-                                    <div class="title">WIFI</div>
-                                    <div class="wifiIndicators">
-                                        <div class="wifiIndicator ind1"></div>
-                                        <div class="wifiIndicator ind2"></div>
-                                        <div class="wifiIndicator ind3"></div>
-                                        <div class="wifiIndicator ind4"></div>
-                                    </div>
-                                </div>
-                                <div class="ip">
-                                    <div class="title">Ip</div>
-                                    <div class="ipValue">127.0.0.21</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+
+
 
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 
 </body>
 </html>
