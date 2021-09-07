@@ -28,9 +28,7 @@ body{
 .velocityValue .content{
     margin-top: 0;
 }
-.image-model{
-    display: none;
-}
+
 .timer{
     display: flex;
     align-items: center;
@@ -152,13 +150,7 @@ input:checked + .slider:before {
 }
 
 
-.gyroscopeBlock img{
-    width: 192px;
-    height: 174px;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+
 
 
 #qualityRow{
@@ -207,15 +199,17 @@ input:checked + .slider:before {
     border-radius:50%;
 }
 
-.clock-number{
+.circle-line{
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     text-align: center;
+    z-index: 1;
+
 }
-.clock-number:after {
+.circle-line:after {
     content: "";
     position: absolute;
     height: 11px;
@@ -228,7 +222,7 @@ input:checked + .slider:before {
     height: 100%;
     left: 7%;
     text-align: center;
-    transform: rotate(237deg);
+    transform: rotate(236deg);
 
 }
 .sunImg:after{
@@ -273,27 +267,17 @@ input:checked + .slider:before {
     transform: rotate(0deg)
 }
 
-.clock-hand{
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-}
-.clock-hand > div{
+.arrow{
+    height: 45px;
+    width: 3px;
+    background: white;
     left: 50%;
     bottom: 50%;
     transform: translateX(-50%);
-
     position: absolute;
     border-radius:12px;
 }
-.second-hand{
-    height: 50px;
-    width: 3px;
-    background: white;
-}
-.second-hand::after{
+.arrow::after{
     content: '';
     transform: translateX(-50%);
     position: absolute;
@@ -303,10 +287,15 @@ input:checked + .slider:before {
     border-right: 8px solid transparent;
     border-bottom: 13px solid white;
 }
-.arrow{
+.arrow-wrapper{
     transform: rotate(45deg);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
 }
-
 
 .name{
     width: 40%;
@@ -329,8 +318,8 @@ input:checked + .slider:before {
     display: flex;
     height: 15%;
 }
-.supplyVoltageIndicator5,.voltageIndicator4,.voltageIndicator5,.currentIndicator1,.currentIndicator2,.currentIndicator3,
-.currentIndicator4,.currentIndicator5{
+
+.indicatorActive{
     background: #D1EDF0;
 }
 
@@ -395,14 +384,14 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
 }
-.sunlightTrackerCircle .clock-number:after{
+.sunlightTrackerCircle .circle-line:after{
     height: 27px;
     width: 2px;
     background: #009DAA;
 
 }
 
-.sunlightTrackerCircle .num7:after,.sunlightTrackerCircle .num8:after,.sunlightTrackerCircle .num9:after{
+.sunlightTrackerCircle .active:after{
     background: white;
 }
 .inner-square{
@@ -542,13 +531,7 @@ input:checked + .slider:before {
     flex-direction: column;
     justify-content: space-between;
 }
-/*.starSolarBlock{*/
-/*    height: 100%;*/
-/*    max-height: 60%;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    flex-direction: column;*/
-/*}*/
+
 .starBlock{
     box-sizing: border-box;
     padding: 10px 20px 0px;
@@ -646,13 +629,7 @@ input:checked + .slider:before {
     flex-direction: column;
     justify-content: space-between;
 }
-/*.batteryTimeBlock{*/
-/*    max-height: 35%;*/
-/*    height: 100%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: space-between;*/
-/*}*/
+
 .magnetometerBlock{
     width: 60%;
     box-sizing: border-box;
