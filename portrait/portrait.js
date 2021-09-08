@@ -1,7 +1,7 @@
 var doRelocation = function() {
     var currentWidth = window.innerWidth,
         breakpointMin = 481,
-        breakpointMax = 775,
+        breakpointMax = 800,
         newLocationMin = window.location.href.replace(/MySatKit.*?html/, 'MySatKit/mobile/mobile.html'),
         newLocationMax = window.location.href.replace(/MySatKit.*?html/, 'MySatKit/landscape/landscape.html');
 

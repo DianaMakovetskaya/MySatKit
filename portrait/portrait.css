@@ -305,7 +305,7 @@ input:checked + .slider:before {
     width: 40%;
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 19px;
     color: white;
 }
@@ -458,7 +458,7 @@ input:checked + .slider:before {
 
 }
 .block{
-    background-color: rgb(90,122,133);
+    background-color: rgba(90,122,133,.25);
 }
 .mainBlock{
     width: 100%;
@@ -515,6 +515,8 @@ input:checked + .slider:before {
     color:#009DAA;
     font-size: 120%;
     background-color: #D1EDF0;
+    border-color:#D1EDF0 ;
+
 }
 .switcherBlock{
     display: flex;
@@ -698,7 +700,8 @@ input:checked + .slider:before {
     flex-direction: column;
     justify-content: space-between;
 }
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 690px),
+       screen and (max-height: 1000px){
     .shootingTimeBlock{
         width: 50%;
     }
@@ -706,14 +709,15 @@ input:checked + .slider:before {
         flex-direction: column;
         align-items: self-start;
     }
-    .velocityBlock{
-        flex-direction: column;
+    .velocityBlock img{
+        width: 150px;
+        height: 140px;
     }
-    .velocityValue{
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-    }
+    /*.velocityValue{*/
+    /*    flex-direction: row;*/
+    /*    width: 100%;*/
+    /*    justify-content: space-between;*/
+    /*}*/
     .time,.onboardTime .time{
         font-size: 25px;
         line-height: 33px;
@@ -740,9 +744,137 @@ input:checked + .slider:before {
         max-height: 40%;
     }
     .wifiBlock{
-        width: 50%;
+        width: 60%;
     }
     .ip{
-        width: 50%;
+        width: 40%;
+    }
+    .image-wrapper{
+        max-height: 60%;
+    }
+    .timeAndButtonBlock{
+        max-height: 40%;
+    }
+    .onboardTime .timer{
+        flex-direction: row;
+    }
+}
+@media screen and (max-height: 860px){
+    .sunlightTrackerCircle{
+        width: 140px;
+        height: 140px;
+    }
+    .starTimerBlock{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .velocityBlock img{
+        width: 130px;
+        height: 110px;
+    }
+    .outer-circle{
+        width: 50px;
+        height: 50px;
+    }
+    .inner-circle{
+        width: 40px;
+        height: 40px;
+    }
+    .arrow{
+        height: 35px;
+    }
+    .inner-square{
+        width: 35px;
+        height: 35px;
+    }
+    .temperatureBlock{
+        padding-top: 0;
+    }
+    .content{
+        font-size: 25px;
+        margin-top: 0;
+    }
+    .sunImg{
+        transform: rotate(230deg);
+    }
+    .solarBlock{
+        padding: 0;
+    }
+    #square{
+        height: 60%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .wifiBlock{
+        width: 70%;
+    }
+    .ip{
+        width: 30%;
+    }
+    .batteryBlock{
+        padding: 0;
+    }
+    .name{
+        font-size: 13px;
+    }
+}
+@media screen and (max-height: 700px){
+    .layer img{
+        width: 25px;
+        height: 25px;
+    }
+    .gyroscopeBlock{
+        padding: 0 20px;
+    }
+    .time{
+        font-size: 20px;
+    }
+    .timer{
+        flex-direction: row;
+    }
+    .titleType1{
+        font-size: 14px;
+    }
+    .sunlightTrackerCircle{
+        width: 110px;
+        height: 110px;
+    }
+    .velocityBlock img{
+        width: 100px;
+        height: 80px;
+    }
+    .sunlightTrackerCircle .circle-line:after{
+        height: 15px;
+    }
+}
+@media screen and (max-height: 600px) {
+    .outer-circle{
+        width: 35px;
+        height: 35px;
+    }
+    .inner-circle{
+        width: 20px;
+        height: 20px;
+    }
+    .outer-circle .circle-line:after{
+        height: 5px;
+    }
+    .inner-circle{
+        display: none;
+    }
+    .arrow{
+        height: 25px;
+    }
+    .arrow:after{
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 10px solid white;
+    }
+    .content{
+        font-size: 15px;
+    }
+    .switcher{
+        font-size: 15px;
     }
 }

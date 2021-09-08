@@ -17,6 +17,7 @@ body{
 }
 
 .mainBlock .velocityBlock{
+    display: flex;
     flex-direction: column;
     height: 30%
 }
@@ -441,7 +442,7 @@ input:checked + .slider:before {
 
 }
 .block{
-    background-color: rgb(90,122,133);
+    background-color: rgba(90,122,133,.25);
 }
 .mainBlock{
     width: 30%;
@@ -498,6 +499,8 @@ input:checked + .slider:before {
     color:#009DAA;
     font-size: 120%;
     background-color: #D1EDF0;
+    border-color:#D1EDF0 ;
+
 }
 .switcherBlock{
     display: flex;
@@ -677,4 +680,103 @@ input:checked + .slider:before {
     line-height: 43px;
 }
 
+@media screen and (max-height: 768px){
+    .sunlightTrackerCircle{
+        width: 200px;
+        height: 200px;
+    }
+    .outer-circle{
+        width: 70px;
+        height: 70px;
+    }
+    .inner-circle{
+        width: 55px;
+        height: 55px;
+    }
+}
 
+@media screen and (max-height: 680px){
+    .sunlightTrackerCircle{
+        width: 150px;
+        height: 150px;
+    }
+    .outer-circle{
+        width: 50px;
+        height: 50px;
+    }
+    .inner-circle{
+        width: 40px;
+        height: 40px;
+    }
+    .velocityBlock img{
+        width: 130px;
+        height: 110px;
+    }
+    .gyroscopeBlock{
+        padding-top: 0;
+    }
+    .content,.time,.onboardTime .time{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .layer img{
+        width: 20px;
+        height: 20px;
+    }
+    .inner-square{
+        width: 35px;
+        height: 35px;
+    }
+    .batteryBlock{
+        max-height: 60%;
+    }
+    .sunImg{
+        transform: rotate(230deg);
+    }
+    .arrow{
+        height: 35px;
+    }
+
+}
+@media screen and (max-height: 470px){
+    .sunlightTrackerCircle{
+        width: 130px;
+        height: 130px;
+    }
+    .outer-circle{
+        width: 45px;
+        height: 45px;
+    }
+    .inner-circle{
+        width: 35px;
+        height: 35px;
+    }
+    .timer{
+        flex-direction: row;
+    }
+    .temperatureBlock{
+        padding-top: 0;
+    }
+    .starTimerBlock{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .velocityValue{
+        flex-direction: column;
+    }
+    .mainBlock .velocityBlock{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 960px){
+    .name{
+        font-size: 13px;
+    }
+    .wifi{
+        width: 60%;
+    }
+    .ip{
+        width: 30%;
+    }
+}

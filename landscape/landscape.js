@@ -1,6 +1,6 @@
 const doRelocation = function() {
     const currentWidth = window.innerWidth,
-        breakpointMin = 775,
+        breakpointMin = 800,
         breakpointMax = 1300,
         newLocationMin = window.location.href.replace(/MySatKit.*?html/, 'MySatKit/portrait/portrait.html'),
         newLocationMax =  window.location.href.replace(/MySatKit.*?html/, 'MySatKit/web/web.html')

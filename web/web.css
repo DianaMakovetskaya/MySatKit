@@ -453,7 +453,7 @@ input:checked + .slider:before {
     color: white;
 }
 .block{
-    background-color: rgb(90,122,133);
+    background-color: rgba(90,122,133,.25);
 }
 .mainBlock{
     width: 40%;
@@ -503,6 +503,7 @@ input:checked + .slider:before {
     color:#009DAA;
     font-size: larger;
     background-color: #D1EDF0;
+    border-color:#D1EDF0 ;
 }
 .switcherBlock{
         display: flex;
@@ -664,7 +665,8 @@ input:checked + .slider:before {
 }
 
 
-@media screen and (max-width: 1880px) {
+@media screen and (max-width: 1910px),
+       screen and (max-height: 1070px){
     .sunlightTrackerCircle{
         width: 200px;
         height: 200px;
@@ -709,5 +711,33 @@ input:checked + .slider:before {
     }
     .sunImg{
         transform: rotate(235deg);
+    }
+}
+@media screen and (max-height: 800px) {
+    .sunlightTrackerCircle{
+        width: 150px;
+        height: 150px;
+    }
+    .inner-square{
+        width: 50px;
+        height: 50px;
+    }
+    .batteryBlock{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .velocityBlock img{
+        width: 130px;
+        height: 110px;
+    }
+
+    .batteryBlock{
+        max-height: 55%;
+    }
+    .titleType1{
+        font-size: 20px;
+    }
+    .sunImg{
+        transform: rotate(230deg);
     }
 }
