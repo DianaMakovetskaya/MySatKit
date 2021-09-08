@@ -741,3 +741,19 @@ input:checked + .slider:before {
         transform: rotate(230deg);
     }
 }
+
+@media screen and (max-width: 1367px),
+       screen and (max-height: 780px){
+    .titleType1{
+        font-size: 18px;
+    }
+    .time,.onboardTime .time,.ipValue,.content{
+        font-size: 24px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    #qualityRow{
+        font-size: smaller;
+    }
+}
